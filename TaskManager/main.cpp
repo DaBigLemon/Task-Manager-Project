@@ -5,7 +5,35 @@
 
 int main()
 {
-    std::cout << "Hello test test twest\n";
+    bool quit = false;
+    std::string userInput;
+
+    std::cout << "Hello Please type Add, List or Quit\n" << std::endl;
+
+    while (!quit) {
+        std::cin >> userInput;
+
+        if (userInput == "Add") {
+            std::cout << "you added a Task!\n" << std::endl;
+
+            std::cout << "Please type Add, List or Quit\n" << std::endl;
+        }
+        else if (userInput == "List") {
+            std::cout << "Here is your List of Tasks.....\n" << std::endl;
+
+            std::cout << "Please type Add, List or Quit\n" << std::endl;
+        }
+        else if (userInput == "Quit") {
+            quit = true;
+        }
+        else {
+            std::cout << "'" << userInput << "'" << "Is not a valid Input\nPlease type a valid command such as\nAdd, List or Quit\n" << std::endl;
+        }
+    }
+
+    
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
