@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/TaskManager.exe"
-		},
-		{
-			"path" : "MinSizeRel/TaskManager.pdb"
+			"path" : "TaskManager"
 		}
 	],
 	"backtrace" : 1,
@@ -43,7 +40,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "-g -std=gnu++17 -arch arm64"
 				}
 			],
 			"language" : "CXX",
@@ -61,38 +58,24 @@
 			]
 		}
 	],
-	"dependencies" : 
-	[
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		}
-	],
 	"id" : "TaskManager::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"fragment" : "-g",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO",
+				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "/subsystem:console",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "TaskManager",
-	"nameOnDisk" : "TaskManager.exe",
+	"nameOnDisk" : "TaskManager",
 	"paths" : 
 	{
 		"build" : ".",
