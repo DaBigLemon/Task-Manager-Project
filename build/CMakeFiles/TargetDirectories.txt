@@ -1,3 +1,0 @@
-/Users/liamhadfield/Desktop/Task-Manager-Project/build/CMakeFiles/TaskManager.dir
-/Users/liamhadfield/Desktop/Task-Manager-Project/build/CMakeFiles/edit_cache.dir
-/Users/liamhadfield/Desktop/Task-Manager-Project/build/CMakeFiles/rebuild_cache.dir
