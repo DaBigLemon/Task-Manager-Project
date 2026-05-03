@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Task-Manager-Project/build/CMakeFiles/TaskManager.dir
+C:/Users/User/Desktop/Task-Manager-Project/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/Desktop/Task-Manager-Project/build/CMakeFiles/ZERO_CHECK.dir
