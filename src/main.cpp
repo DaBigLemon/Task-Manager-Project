@@ -15,6 +15,7 @@ int main() {
     std::vector<std::string> taskListVec;
 
     std::string userInput = "";
+    int indexSelect; 
 
     // SIMPLE WHILE LOOP JUST TO TEST IF EVERYTHINGS WORKING
     std::cout << "Hello Welcome to my task manager CLI\ntype add, list, delete or quit"
@@ -46,14 +47,49 @@ int main() {
             }
             BorderLine();
         }
-        else if (userInput == "delete"){
-            std::cout << "\nyou deleted a task from the list\n" << std::endl;
+        else if (userInput == "delete")
+        {
+            BorderLine();
+
+            if (taskListVec.empty())
+            {
+                std::cout << "LIST IS EMPTY NOTHING TO DELETE!" << std::endl;
+            }
+            else
+            {
+                for (int i = 0; i < taskListVec.size(); i++)
+                {
+                    std::cout << "[" << i + 1 << "] "
+                            << taskListVec[i] << std::endl;
+                }
+
+                BorderLine();
+
+                std::cout << "\nPICK A TASK TO DELETE!" << std::endl;
+
+                std::cin >> indexSelect;
+
+                if (std::cin.fail() || indexSelect < 1 || indexSelect > taskListVec.size())
+                {
+                    std::cout << "Invalid input.\n";
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                }
+                else
+                {
+                    std::cout << "You deleted Task '" << taskListVec[indexSelect - 1] << "'" << std::endl;
+
+                    taskListVec.erase(taskListVec.begin() + (indexSelect - 1));
+                }
+            }
+
+            BorderLine();
         }
         else if (userInput == "quit"){
-            quit = true;
+        quit = true;
         }
         std::cout << "Please type\n"
-            << "add, " << "list, " << "delete, " << "quit\n\n" << std::endl;
+        << "add, " << "list, " << "delete, " << "quit\n\n" << std::endl;
              
     }   
     
